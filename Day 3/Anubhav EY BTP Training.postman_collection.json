@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "3c80973e-c1cc-41af-aa79-ed56c6465eac",
+		"name": "Anubhav EY BTP Training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Vendors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/vendors"
+			},
+			"response": []
+		},
+		{
+			"name": "OData calls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/anubhav.svc/VendorSet?$format=json",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"anubhav.svc",
+						"VendorSet"
+					],
+					"query": [
+						{
+							"key": "$format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Single Vendor Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/getVendors/3"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Vendor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"companyName\": \"Shiva Trainings\",\r\n        \"contactName\": \"Shiva\",\r\n        \"lastName\": \"Kumar\",\r\n        \"website\": \"ey.com\",\r\n        \"email\": \"shiva@ey.com\",\r\n        \"status\": \"A\",\r\n        \"regDate\": \"2022-11-01T06:13:45.728+00:00\",\r\n        \"addresses\":[\r\n            {\r\n                \"addressType\": \"H\",\r\n                \"street\": \"Dieterhopp\",\r\n                \"city\": \"Waldorf\",\r\n                \"country\": \"DE\",\r\n                \"region\":\"EU\"\r\n            },\r\n            {\r\n                \"addressType\": \"O\",\r\n                \"street\": \"ITPL\",\r\n                \"city\": \"Bangalore\",\r\n                \"country\": \"IN\",\r\n                \"region\":\"AP\"\r\n            }\r\n\r\n        ]\r\n    }   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/vendor"
+			},
+			"response": []
+		},
+		{
+			"name": "GET data from BTp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://springbtpdb-humble-possum-il.cfapps.us10-001.hana.ondemand.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Vendor Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CompanyName\": \"IBM\",\r\n    \"FirstName\": \"Veronica\",\r\n    \"LastName\": \"\",\r\n    \"Website\": \"ibm.com\",\r\n    \"Email\": \"Veronica@ibm.com\",\r\n    \"Status\": \"A\",\r\n    \"GstNo\": \"GSTIN465465\",\r\n    \"Addresses\": [\r\n        {\r\n            \"AddressType\": \"H\",\r\n            \"Street\": \"MG Road\",\r\n            \"City\": \"Gurgaon\",\r\n            \"Country\": \"India\",\r\n            \"Region\": \"APJ\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://https://springbtpdb-humble-possum-il.cfapps.us10-001.hana.ondemand.com/vendors"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Vendor Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"code\": \"Shiva\",\r\n        \"companyName\": \"Shiva Trainings\",\r\n        \"contactName\": \"Shiva\",\r\n        \"lastName\": \"Kumar\",\r\n        \"website\": \"ey.com\",\r\n        \"email\": \"shiva@ey.com\",\r\n        \"status\": \"A\",\r\n        \"regDate\": \"2022-11-01T06:13:45.728+00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/changeInfo"
+			},
+			"response": []
+		},
+		{
+			"name": "Anubhav OData in CF",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": {
+						"password": "Welcome1",
+						"username": "install.abap@gmail.com",
+						"clientSecret": "viSBihmTSDfJdBAZw4eS2NzlNmY=",
+						"clientId": "sb-springbtpdb!t172194",
+						"accessTokenUrl": "https://c593bcd7trial.authentication.us10.hana.ondemand.com/oauth/token",
+						"scope": "",
+						"addTokenTo": "header",
+						"grant_type": "password_credentials",
+						"client_authentication": "header",
+						"tokenName": "EYToken",
+						"authUrl": "https://0c4c3479trial.authentication.us10.hana.ondemand.com/oauth/token",
+						"redirect_uri": "",
+						"useBrowser": false,
+						"tokenType": "bearer"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://springbtpdb-humble-possum-il.cfapps.us10-001.hana.ondemand.com/vendors"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Vendor data",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": {
+						"password": "Welcome1",
+						"username": "install.abap@gmail.com",
+						"clientSecret": "viSBihmTSDfJdBAZw4eS2NzlNmY=",
+						"clientId": "sb-springbtpdb!t172194",
+						"accessTokenUrl": "https://c593bcd7trial.authentication.us10.hana.ondemand.com/oauth/token",
+						"scope": "",
+						"addTokenTo": "header",
+						"grant_type": "password_credentials",
+						"client_authentication": "header",
+						"tokenName": "EYToken",
+						"authUrl": "https://0c4c3479trial.authentication.us10.hana.ondemand.com/oauth/token",
+						"redirect_uri": "",
+						"useBrowser": false,
+						"tokenType": "bearer"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\": \"Shiva Trainings\",\r\n    \"contactName\": \"Shiva\",\r\n    \"lastName\": \"Kumar\",\r\n    \"website\": \"ey.com\",\r\n    \"email\": \"shiva@ey.com\",\r\n    \"status\": \"A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://springbtpdb-humble-possum-il.cfapps.us10-001.hana.ondemand.com/vendor"
+			},
+			"response": []
+		}
+	]
+}
