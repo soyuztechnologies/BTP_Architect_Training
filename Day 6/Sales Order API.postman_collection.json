@@ -148,7 +148,7 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "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"
+						"token": ""
 					}
 				},
 				"method": "POST",
