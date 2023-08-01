@@ -48,7 +48,7 @@
 				"auth": {
 					"type": "basic",
 					"basic": {
-						"password": "welcome@123",
+						"password": "******",
 						"username": "mob5"
 					}
 				},
@@ -60,7 +60,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Basic bW9iMzp1c2VyQDMzMw=="
+						"value": "******"
 					}
 				],
 				"url": {
@@ -118,7 +118,7 @@
 				"auth": {
 					"type": "basic",
 					"basic": {
-						"password": "welcome@123",
+						"password": "******",
 						"username": "mob5"
 					}
 				},
